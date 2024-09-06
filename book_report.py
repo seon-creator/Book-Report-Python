@@ -33,7 +33,7 @@ def main():
 
         elif choice == 3:
             # 3. 독후감 보기
-
+            read()
 
         elif choice == 4:
             # 4. 독후감 수정
