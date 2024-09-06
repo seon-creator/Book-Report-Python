@@ -1,7 +1,7 @@
 # book_report.py
 from file_create import create
 from file_delete import delete_file
-from read import read
+from read import read_files, display_files
 from update import update
 import os
 
@@ -52,11 +52,9 @@ def main():
         elif choice == 4:
             # 4. 독후감 수정
             folder_path = './Data'
-            txt_files = read.read_files(folder_path)
+            txt_files = read_files(folder_path)
             
             if txt_files:
-                for idx, file_name in enumerate(txt_files, 1):
-                    print(f"{idx}. {fine_name}")
                 try:
                     update_choice = int(input("수정할 파일 번호를 선택하세요: ")) - 1
                     if 0 <= update_choice < len(txt_files):
