@@ -27,10 +27,11 @@ def main():
 
         if choice == 1:
             # 1. 독후감 생성
-            
+            create()
         elif choice == 2:
             # 2. 독후감 삭제
-
+            file_name = input("삭제할 파일명을 작성해주세요:")
+            delete_file(file_name)
         elif choice == 3:
             # 3. 독후감 보기
             folder_path = './Data'
