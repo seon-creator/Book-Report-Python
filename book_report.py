@@ -30,6 +30,7 @@ def main():
             create()
         elif choice == 2:
             # 2. 독후감 삭제
+            txt_files = read_files(folder_path)
             file_name = input("삭제할 파일명을 작성해주세요(확장자 제외):")
             delete_file(file_name)
         elif choice == 3:
