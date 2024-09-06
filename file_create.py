@@ -1,7 +1,7 @@
-def create():
-    import os
-    from datetime import datetime
+import os
+from datetime import datetime
 
+def create():
     # 책 정보 및 독후감 내용 입력받기
     book_title = input("책 제목을 입력하세요: ")
     author = input("저자를 입력하세요: ")
