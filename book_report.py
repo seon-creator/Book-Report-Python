@@ -41,7 +41,18 @@ def main():
             txt_files = read.read_files(folder_path)
             
             if txt_files:
-
+                for idx, file_name in enumerate(txt_files, 1):
+                    print(f"{idx}. {fine_name}")
+                try:
+                    update_choice = int(input("수정할 파일 번호를 선택하세요: ")) - 1
+                    if 0 <= update_choice < len(txt_files):
+                        update(folder_path, txt_files[update_choice])  # 파일 인자 전달
+                    else:
+                        print("잘못된 선택입니다.")
+                except ValueError:
+                    print("유효한 숫자를 입력하세요.")
+            else:
+                print("수정할 팔이 없습니다. ")
         elif choice == 0:
             # 0. 프로그램 종료
             print("프로그램을 종료합니다.")
