@@ -1,0 +1,5 @@
+어린왕자
+생텍쥐페리
+임수현
+2024-09-06
+C:/Users/user/anaconda3/envs/env/python.exe c:/project_5/Book-Report-Python/book_report.py

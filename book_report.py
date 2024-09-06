@@ -42,12 +42,12 @@ def main():
             # 텍스트 파일이 있는 경우에만 계속 진행
             if txt_files:
                 # 사용자로부터 파일명 입력받기
-                file_name = input("내용을 보고 싶은 파일명을 입력하세요: ")
+                file_idx = int(input("내용을 보고 싶은 파일 번호를 선택하세요: ")) - 1
         
-                if file_name in txt_files:
-                    display_files(folder_path, file_name)
+                if 0 <= file_idx < len(txt_files):
+                    display_files(folder_path, txt_files[file_idx])
                 else:
-                    print("목록에 없는 파일입니다. 정확한 파일명을 입력하세요.")
+                    print("목록에 없는 파일입니다. 정확한 파일 번호를 입력하세요.")
 
         elif choice == 4:
             # 4. 독후감 수정
