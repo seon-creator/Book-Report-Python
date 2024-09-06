@@ -52,7 +52,7 @@ def main():
                 except ValueError:
                     print("유효한 숫자를 입력하세요.")
             else:
-                print("수정할 팔이 없습니다. ")
+                print("수정할 파일이 없습니다. ")
         elif choice == 0:
             # 0. 프로그램 종료
             print("프로그램을 종료합니다.")
