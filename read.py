@@ -37,18 +37,18 @@ def display_files(folder_path, file_name):
     except Exception as e:
         print("파일을 여는 중 오류 발생:", e)
 
-
-folder_path = './Data'
+def read():
+    folder_path = './Data'
     
-# 텍스트 파일 목록 표시
-txt_files = read_files(folder_path)
+    # 텍스트 파일 목록 표시
+    txt_files = read_files(folder_path)
     
-# 텍스트 파일이 있는 경우에만 계속 진행
-if txt_files:
-    # 사용자로부터 파일명 입력받기
-    file_name = input("내용을 보고 싶은 파일명을 입력하세요: ")
+    # 텍스트 파일이 있는 경우에만 계속 진행
+    if txt_files:
+        # 사용자로부터 파일명 입력받기
+        file_name = input("내용을 보고 싶은 파일명을 입력하세요: ")
         
-    if file_name in txt_files:
-        display_files(folder_path, file_name)
-    else:
-        print("목록에 없는 파일입니다. 정확한 파일명을 입력하세요.")
+        if file_name in txt_files:
+            display_files(folder_path, file_name)
+        else:
+            print("목록에 없는 파일입니다. 정확한 파일명을 입력하세요.")
