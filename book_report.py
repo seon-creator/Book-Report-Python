@@ -33,7 +33,20 @@ def main():
 
         elif choice == 3:
             # 3. 독후감 보기
-
+            folder_path = './Data'
+    
+            # 텍스트 파일 목록 표시
+            txt_files = read_files(folder_path)
+    
+            # 텍스트 파일이 있는 경우에만 계속 진행
+            if txt_files:
+                # 사용자로부터 파일명 입력받기
+                file_name = input("내용을 보고 싶은 파일명을 입력하세요: ")
+        
+                if file_name in txt_files:
+                    display_files(folder_path, file_name)
+                else:
+                    print("목록에 없는 파일입니다. 정확한 파일명을 입력하세요.")
 
         elif choice == 4:
             # 4. 독후감 수정
