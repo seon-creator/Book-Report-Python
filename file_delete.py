@@ -2,7 +2,7 @@ import os
 
 def delete_file(filename):
     # 파일 경로 설정
-    file_dir = 'data'
+    file_dir = 'Data'
     file_path = os.path.join(file_dir, f"{filename}.txt")
     
     # 파일 존재 여부 확인 후 삭제

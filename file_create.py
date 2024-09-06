@@ -15,7 +15,7 @@ def create():
     content = f"{book_title}\n{author}\n{reviewer}\n{current_date}\n{review_content}"
 
     # 디렉토리 확인 및 생성
-    file_dir = 'data'
+    file_dir = 'Data'
     if not os.path.exists(file_dir):
         os.makedirs(file_dir)
 
